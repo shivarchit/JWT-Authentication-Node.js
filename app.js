@@ -20,7 +20,7 @@ app.get("/block-me", async (req, res) => {
 app.get("/block-me-2 ", async (req, res) => {
     try {
 
-        await asyncAvg(9e10, function (avg) {
+        asyncAvg(9e10, function (avg) {
             console.log('avg of 1-n: ' + avg);
             res.status(200).json({
                 isActionSuccess: true,
@@ -115,7 +115,7 @@ async function blockForTwoMinutes() {
 /* create server */
 
 let __server = http.createServer(app);
-__server.listen(3001);
+// __server.listen(3001);
 
 __server.on("listening", () => {
     console.log(`Application server started at http://localhost:3001`);
