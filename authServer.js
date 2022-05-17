@@ -18,6 +18,14 @@ app.post("/token", (req, res) => {
 
 });
 
+app.delete("/logout", (req, res) => {
+    console.log(refreshTokenArray)
+    console.log(req.body.token)
+    refreshTokenArray = refreshTokenArray.filter(token => token !== req.body.token);
+    res.sendStatus(204);
+
+});
+
 app.post("/login", (req, res) => {
     const userName = req.body.userName;
     const user = { userName };

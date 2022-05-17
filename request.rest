@@ -1,14 +1,24 @@
 GET http://localhost:3001/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlNoaXYiLCJpYXQiOjE2NTI3OTE5MzYsImV4cCI6MTY1Mjc5MTk2Nn0.lh-GlrRlUOCkV2wn5yP90gFcX-ePrfn8fy8OiCfQJ6M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlNoaXYiLCJpYXQiOjE2NTI3OTM1MzAsImV4cCI6MTY1Mjc5MzU2MH0.NpY7jqtFKA8SkHBCVnMNbPg88foJ2hmQ6x4_d_KvOHs
 
 ###
 
 
-POST http://localhost:3001/login
+# POST http://localhost:3001/login
+# Content-Type: application/json
+
+# {
+#     "userName": "Shiv"
+# }
+
+###
+
+
+DELETE  http://localhost:4001/logout
 Content-Type: application/json
 
 {
-    "userName": "Shiv"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlNoaXYiLCJpYXQiOjE2NTI3OTM0ODl9.FBeciXTddYjAqNFpeha5ryo8MxAt7Qcaa9B-pAUcWf8"
 }
 
 ###
@@ -26,5 +36,5 @@ POST http://localhost:4001/token
 Content-Type: application/json
 
 {
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlNoaXYiLCJpYXQiOjE2NTI3OTE4Nzl9.ww-VeC_0c960OT7CdLW18aFJ4-TfWVBDJKvC-rmOCVo"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6IlNoaXYiLCJpYXQiOjE2NTI3OTM0ODl9.FBeciXTddYjAqNFpeha5ryo8MxAt7Qcaa9B-pAUcWf8"
 }
