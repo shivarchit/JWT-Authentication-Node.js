@@ -11,6 +11,15 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
+            "program": "${workspaceFolder}/authServer.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Server",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
             "program": "${workspaceFolder}/server.js"
         }
     ]
