@@ -5,6 +5,10 @@ const app = express();
 const jwt = require("jsonwebtoken");
 app.use(express.json());
 let refreshTokenArray = [];
+
+app.get('/',(req, res) => res.send('Hello World'));
+
+
 app.post("/token", (req, res) => {
     const refreshToken = req.body.token;
     if (!refreshToken) return res.sendStatus(401);
